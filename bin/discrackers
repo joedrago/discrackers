@@ -1,0 +1,16 @@
+#!/usr/bin/env node
+
+var path = require('path');
+var fs = require('fs');
+var lib = path.join(path.dirname(fs.realpathSync(__filename)), '../build');
+
+var argv = process.argv.slice(2);
+var subcommand = argv.shift();
+if(!subcommand) {
+    // Syntax
+    console.log("discrackers server");
+} else if(subcommand == 'server') {
+    require(lib + '/server')(argv);
+} else {
+    console.log("unknown subcommand: " + subcommand);
+}

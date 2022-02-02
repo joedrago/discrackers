@@ -1,0 +1,22 @@
+{
+  "name": "discrackers",
+  "version": "0.0.1",
+  "description": "Discord Auth For Crackers",
+  "bin": {
+    "discrackers": "./bin/discrackers"
+  },
+  "scripts": {
+    "build": "cake build",
+    "watch": "cake watch"
+  },
+  "author": "Joe Drago",
+  "devDependencies": {
+    "coffeescript": "^2.6.1",
+    "node-watch": "^0.7.3"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "express": "^4.17.2",
+    "write-file-atomic": "^4.0.0"
+  }
+}
