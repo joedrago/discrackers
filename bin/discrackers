@@ -8,9 +8,11 @@ var argv = process.argv.slice(2);
 var subcommand = argv.shift();
 if(!subcommand) {
     // Syntax
-    console.log("discrackers server");
+    console.log("discrackers [server|backup]");
 } else if(subcommand == 'server') {
     require(lib + '/server')(argv);
+} else if(subcommand == 'backup') {
+    require(lib + '/backup')(argv);
 } else {
     console.log("unknown subcommand: " + subcommand);
 }
