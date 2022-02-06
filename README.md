@@ -15,7 +15,7 @@ Prerequisites
 
         http://localhost:3003/oauth
 
-  If you're configuring this for its final restiny place (perhaps with a real domain name and https), set this accordingly. It should be the location of where you're serving this app with `/oauth` appended to the end. Hit the big green `Save Changes` in the bottom right corner of the web page.
+  If you're configuring this for its final resting place (perhaps with a real domain name and https), set this accordingly. It should be the location of where you're serving this app with `/oauth` appended to the end. Hit the big green `Save Changes` in the bottom right corner of the web page.
 
 * If you're planning to expose this to the internet (instead of just running it locally), I recommend using [nginx](https://www.nginx.com/) as your HTTPS server, which can easily proxy requests to Discrackers.
 
