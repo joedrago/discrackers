@@ -112,4 +112,13 @@ Installation
 
   I recommend running the full command manually once from another directory and seeing the changes appear in the remote repo before having cron do it for you.
 
+Adding / Rearranging Comics
+---------------------------
+
+Drop them in root in some organized fashion and simply run crackers on the `root` dir again:
+
+        crackers gen path/to/discrackers/root
+
+You shouldn't even have to restart the server itself.
+
 That's it! Good luck!
