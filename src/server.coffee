@@ -102,8 +102,12 @@ processOAuth = (code) ->
             # console.log "Me replied:", meData
             if meData? and meData.username? and meData.discriminator?
               tag = "#{meData.username}##{meData.discriminator}"
-              auth = database.newAuth(tag)
-              resolve(auth.token)
+              if secrets.allowed? and not secrets.allowed[tag]
+                console.log "ERROR: Discord user '#{tag}' is not in secrets.allowed, bailing"
+                resolve('')
+              else
+                auth = database.newAuth(tag)
+                resolve(auth.token)
             else
               console.log "ERROR: Giving up on new token, couldn't get username and discriminator:", meData
               resolve('')
